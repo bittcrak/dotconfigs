@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+# Author: https://github.com/x0rzavi
+# Description: Lock sway with swaylock-effects
+# Dependencies: sway
+# Theme: Catppuccin
+
+swaylock \
+	--ignore-empty-password \
+	--show-failed-attempts \
+	--daemonize \
+	--clock \
+	--timestr "%I:%M %p" \
+	--datestr "%b %d, %G" \
+	--image wallpapers_path/1.jpg \
+	--scaling fill \
+	--effect-vignette 0.1:0.8 \
+	--font "JetBrainsMono Nerd Font" \
+	--font-size 25 \
+	--indicator \
+	--indicator-radius 125 \
+	--indicator-thickness 15 \
+	--bs-hl-color $lavender \
+	--key-hl-color $lavender \
+	--caps-lock-bs-hl-color $lavender \
+	--caps-lock-key-hl-color $lavender \
+	--inside-color $black \
+	--inside-clear-color $black \
+	--inside-caps-lock-color $black \
+	--inside-ver-color $black \
+	--inside-wrong-color $black \
+	--line-color $transparent \
+	--line-clear-color $transparent \
+	--line-caps-lock-color $transparent \
+	--line-ver-color $transparent \
+	--line-wrong-color $transparent \
+	--ring-color $peach \
+	--ring-clear-color $yellow \
+	--ring-caps-lock-color $peach \
+	--ring-ver-color $green \
+	--ring-wrong-color $red \
+	--separator-color $transparent \
+	--text-color $lavender \
+	--text-clear-color $lavender \
+	--text-ver-color $lavender \
+	--text-wrong-color $lavender \
+	--text-caps-lock-color $lavender 

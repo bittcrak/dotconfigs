@@ -1,0 +1,101 @@
+{
+    "modules-left": [
+		"custom/launcher",
+		"sway/workspaces",
+		"sway/mode",
+    ],
+    "modules-center": [
+    	"clock"
+    ],
+    "modules-right": [
+        "tray",
+        "temperature",
+        "backlight",
+        "pulseaudio",
+        "network",
+        "battery",
+        "custom/off"
+    ],
+    "layer": "top",
+    "custom/launcher":{
+        "format":"ⓜ",
+        "tooltip":true
+    },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        //"format": "{icon}",
+        //"persistent_workspaces": {
+		//	"1": [],
+        //	"2": [],
+        //	"3": [],
+        //	"4": []
+		//},
+        //"format-icons": {
+        //   "urgent": " 󰗖"
+        //}
+    },
+     "temperature": {
+		"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+		"critical-threshold": 85,
+		"interval": 1,
+		"format": "󰔏 {temperatureC}°C",
+		"tooltip": false,
+	},
+    "backlight": {
+            "format": "󰃠 {percent}%",
+            "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --dec",
+            "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --inc",
+            "smooth-scrolling-threshold": 5,
+    },
+    "pulseaudio": {
+            "scroll-step": 1,
+            "format": "{icon} {volume}%", 
+            "format-muted": "󰖁 Muted",
+            "format-icons": {
+                "default": ["", "", ""]
+            },
+            "on-scroll-up": "~/.config/waybar/scripts/volume.sh --dec",
+            "on-scroll-down": "~/.config/waybar/scripts/volume.sh --inc",
+            "smooth-scrolling-threshold": 5,
+            "tooltip": false,
+            "on-click": "~/.config/waybar/scripts/volume.sh --toggle",
+            "on-click-right": "pavucontrol",
+    },
+    "battery": {
+            "interval": 10,
+            "states": {
+                	"warning": 20,
+                	"critical": 10
+	            },
+	            "format": "{icon} {capacity}%",
+	            "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂁", "󰂂", "󰁹"],
+	            "format-full": "{icon} {capacity}%",
+	            "format-charging": "󰂄 {capacity}%",
+            "tooltip": true
+    },
+    "clock": {
+		"interval": 1,
+		"format": "{:%I:%M %p  %A %b %d}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"tooltip": true
+    },
+    "network": {
+    	"interval": 1,
+        "format-wifi": "󰒢 {essid}",
+        "format-ethernet": "󰈀  {ifname} ({ipaddr})",
+        "format-linked": "󰒢 {essid} (No IP)",
+        "format-disconnected": "󰒢 Disconnected",
+        "format-alt": "{ifname} ({ipaddr})",
+        "tooltip": false,
+        "on-click-right": "exec nm-connection-editor"
+    },
+    "custom/off": {
+        "format": "",
+        "on-click": "~/.config/sway/scripts/powermenu.sh",
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
