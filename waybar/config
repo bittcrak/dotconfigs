@@ -2,7 +2,7 @@
     "modules-left": [
 		"custom/launcher",
 		"sway/workspaces",
-		"sway/mode",
+		"sway/mode"
     ],
     "modules-center": [
     	"clock"
@@ -22,22 +22,13 @@
     },
     "sway/workspaces": {
         "disable-scroll": true,
-       // "format": "{icon}",
-       // "persistent_workspaces": {
-	//	"1": [],
-        //	"2": [],
-        //	"3": [],
-       	//	"4": []
-//	},
- //       "format-icons": {
-//        "urgent": " 󰗖"
-//        }
-    },
+	"format":"{name}"
+	},
     "backlight": {
             "format": "󰃠 {percent}%",
-            "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --dec",
-            "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --inc",
-            "smooth-scrolling-threshold": 5,
+            "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --inc",
+            "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec",
+            "smooth-scrolling-threshold": 1
     },
     "pulseaudio": {
             "scroll-step": 1,
@@ -46,12 +37,12 @@
             "format-icons": {
                 "default": ["", "", ""]
             },
-            "on-scroll-up": "~/.config/waybar/scripts/volume.sh --dec",
-            "on-scroll-down": "~/.config/waybar/scripts/volume.sh --inc",
-            "smooth-scrolling-threshold": 5,
+            "on-scroll-up": "~/.config/waybar/scripts/volume.sh --inc",
+            "on-scroll-down": "~/.config/waybar/scripts/volume.sh --dec",
+            "smooth-scrolling-threshold": 1,
             "tooltip": false,
             "on-click": "~/.config/waybar/scripts/volume.sh --toggle",
-            "on-click-right": "pavucontrol",
+            "on-click-right": "pavucontrol"
     },
     "battery": {
             "interval": 10,

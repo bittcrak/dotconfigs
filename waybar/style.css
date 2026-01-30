@@ -31,10 +31,10 @@ window#waybar.hidden {
 }
 
 window > box {
-	margin-left: 2px;
-	margin-right: 2px;
-	margin-top: 2px;
-	background-color: rgba(30, 30, 46, 0.5);
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-top: 1px;
+	background-color: rgba(96, 90, 96, 0.5);
 	/* border-style: solid; */
 	/* border-width: 2px; */
 	/* border-color: rgb(171, 233, 179); */
