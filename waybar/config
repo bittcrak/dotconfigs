@@ -26,8 +26,8 @@
 	},
     "backlight": {
             "format": "󰃠 {percent}%",
-            "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --inc",
-            "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec",
+            "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --dec",
+            "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --inc",
             "smooth-scrolling-threshold": 1
     },
     "pulseaudio": {

@@ -16,7 +16,7 @@
 
 .warning, .critical, .urgent {
 	animation-name: blink_red;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -41,8 +41,8 @@ window > box {
 }
 
 #workspaces button {
-	padding-top: 6px;
-	padding-bottom: 6px;
+	padding-top: 1px;
+	padding-bottom: 1px;
 	padding-left: 2px;
 	padding-right: 2px;
 }
@@ -68,7 +68,7 @@ window > box {
 }
 
 tooltip {
-  background: rgb(48, 45, 65);
+  background: rgba(48, 45, 65, 0.7);
 }
 
 tooltip label {
