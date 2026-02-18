@@ -110,7 +110,7 @@ input "1267:12490:DELL097F:00_04F3:30CA_Touchpad" {
 }
 
 # Hide Cursor
-seat  * hide_cursor 1000
+seat  * hide_cursor 10000
 
 ### Misc Options ###
 focus_follows_mouse yes
